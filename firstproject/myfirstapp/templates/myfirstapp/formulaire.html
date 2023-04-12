@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>mon premier formulaire</title>
-    <link href="(static 'myfirstapp/index.css' %)" type="text/css" rel="stylesheet"
-</head>
 <body>
     <form action="/myfirstapp/bonjour" method="get">
-            {% csrf_token %}
-        <label for="nom"> Nom :</label>
-        <input type="text" name="nom"/>
-        <input type="submit" value="envoyer"/>
+        {% csrf_token %}
+            <label for="nom"> Nom :</label>
+            <input type="text" name="nom"/>
+            <label for="nom"> prenom :</label>
+            <input type="text" name="prenom"/>
+            <label for="nom"> age :</label>
+            <input type="text" name="age"/>
+            <input type="submit" value="envoyer"/>
     </form>
 </body>
 </html>
