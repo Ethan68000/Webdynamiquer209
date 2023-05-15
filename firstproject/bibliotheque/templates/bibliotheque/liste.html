@@ -10,6 +10,8 @@
     <ul>
         {% for l in liste %}
         <li> livre {{l}} <a href="/bibliotheque/affiche/{{l.id}}/"> afficher </a> </li>
+            <a href="/bibliotheque/update/{{l.id}}/"> update</a>
+            <a href="/bibliotheque/delete/{{l.id}}/"> delete</a>
         {% endfor %}
     </ul>
 </body>

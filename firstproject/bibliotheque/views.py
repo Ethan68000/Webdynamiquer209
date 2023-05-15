@@ -24,7 +24,7 @@ def traitement(request):
 
 def affiche(request, id):
     livre = models.Livre.objects.get(pk=id)
-    return reder(request,"bibliotheque/affiche.html",{"livre": livre})
+    return render(request,"bibliotheque/affiche.html",{"livre": livre})
 
 def traitementupdate(request, id):
     lform = LivreForm(request.POST)
@@ -39,3 +39,8 @@ def traitementupdate(request, id):
 def liste(request):
     liste = models.Livre.objects.all()
     return render(request,"bibliotheque/liste.html", {"liste":liste})
+
+def delete(request):
+    livre = models.Livre.objects.all()
+    livre.delete()
+    return HttpResponseRedirect("/bibliotheque/liste")
