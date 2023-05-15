@@ -1,12 +1,9 @@
 from django.db import models
 
 class Livre(models.Model):
-
     titre = models.CharField(max_length=100)
-
     auteur = models.CharField(max_length = 100)
     date_parution = models.DateField(blank=True, null = True)
-
     nombre_pages = models.IntegerField(blank=False)
     resume = models.TextField(null = True, blank = True)
 
