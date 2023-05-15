@@ -35,3 +35,7 @@ def traitementupdate(request, id):
         return HttpResponseRedirect("/bibliotheque/")
     else:
         return render(request, "bibliotheque/update.html", {"form": lform, "id": id})
+
+def liste(request):
+    liste = models.Livre.objects.all()
+    return render(request,"bibliotheque/liste.html", {"liste":liste})
